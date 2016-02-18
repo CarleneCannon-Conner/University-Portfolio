@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta name="description" content="Simple Ka Pow! email client made using AJAX on a WAMP Server" />
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript, AJAX, Email, Client, Ka Pow" />
+	<meta name="author" content="Carlene J. Conner" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="style.css" rel="stylesheet"  />
+	<script language="javascript" type="text/javascript" src="scripts.js"></script>
+    
+	<title>Ka Pow!</title>
+       
+</head>
+<body>
+	<div id="box">
+		<div id ="centering1">
+    		<br/>
+			<h1>Ka Pow!</h1>
+    		<br/>
+    	</div><!--centering1-->
+    	<div class="formLayout">
+			<h3 id="welcome"></h3>
+    		<div id="mailTemp"></div>
+     		<div id="mailMeTemp"></div>
+    		<div id ="dateTemp"></div>
+    		<div id="subjectTemp"></div>
+    		<div id="inboxBtn">
+        		<input name="compose" type="button" class="button" onclick="composeIt();" value="Compose"  />
+        		<input name="logout" type="button" class="button" onclick="logOut();" value="Log-Out"  /><br/><br/>
+   	  		</div><!--inboxBtn-->
+    		<div id="viewBtn">
+        		<input name="reply" type="button" class="button" onclick="replyIt();" value="Reply"  />
+            	<input name="forward" type="button" class="button" onclick="forwardIt();" value="Forward"  />
+        		<input name="delete" type="button" class="button" onclick="deleteIt();" value="Delete"  />
+            	<input name="backtoInbox" type="button" class="button" onclick="goToInbox();" value="Back"  />
+        		<input name="logout" type="button" class="button" onclick="logOut();" value="Log-Out"  /><br/><br/>
+   	  		</div><!--viewBtn-->
+    		<div id="composeBtn">        
+    			<input name="backtoInbox" type="button" class="button" onclick="goToInbox();" value="Back"  />
+        		<input name="logout" type="button" class="button" onclick="logOut();" value="Log-Out"  /><br/><br/>
+   	  		</div><!--composeBtn-->
+			<div id="inboxBox"></div>
+    		<div id ="messageBox"></div>
+			<div id = "register">
+				<h3>Register as a New User</h3>
+				<form action="index.html" method="get" >
+					<label>User ID: </label><input type="text" id="userID" />
+                	e.g. cjc16, user1 or myName<br/><br/>
+					<label>First Name:</label><input type="text"  id="fistName"  />
+					<label>Surname:</label><input type="text" id="surame"  />
+					<label>Password:</label><input type="password" id="passWD" onkeyup="passwordStrength(this.value)" />
+					<label>Confirm Password:</label><input type="password" id="passwordCon"  /><br/>
+			
+         	    	<div id="passwordDescription">Bar bellow indicates password strength</div><br/>
+					<div id="passwordStrength" class="strength0"></div><br/>
+			
+            		<input name="submit" type="button" class="button" onclick="registerNew();" value="Register"  /><br/><br/>
+			
+        	   		Already a member of Ka Pow? Sign in here
+           			<input type="button" name="sign-in" value="Sign-in" onclick="goToSignin();"  /><br/>
+				</form>
+	  		</div><!--register-->
+			<div id = "signin">
+				<h3>Sign-in</h3>
+				<form action="index.html" method="get" >
+					<label>User ID: </label><input type="text" id="UserID" />
+					<label>Password:</label><input type="password" id="PassWD" />
+                
+               		<input name="submit" type="button" class="button" onclick="loginUser();" value="Sign-In"  /><br/><br/>
+                
+					New to Ka Pow? Register here			
+                	<input type="button" name="register" value="Register" onclick="goToRegister();"  /><br/>
+				</form>
+			</div><!--signin-->
+        	<div id="compose">
+				<form action="index.html" method="get" >
+					<label>To:</label><input type="text" id="to1" /><br/>
+					<label>Subject:</label><input type="text" id="subject1"  /><br />
+					<label>Message:</label><textarea id="message1" cols="75" rows="20"></textarea><br /><br/>
+					<input type="button" class="button" onclick="sendMail();" value="Send" /><br/>
+				</form>
+			</div><!--composeBox-->
+        	<div id="reply">
+				<form action="index.html" method="get" >
+            		<label>To: </label><div id ="senderTemp"></div><br />
+					<label>Subject:</label><input type="text" id="subject2" value="RE: "  /><br />
+					<label>Message:</label><textarea id="message2" cols="75" rows="20"></textarea><br /><br/>
+					<input type="button" class="button" onclick="replying();" value="Send" /><br/>
+				</form>
+			</div><!--reply-->
+        	<div id="forward">
+				<form action="index.html" method="get" >
+                	<label>To:</label><input type="text" id="to3" /><br/>
+					<label>Subject:</label><input type="text" id="subject3" value="FWD: "  /><br />
+					<label>Message:</label><textarea id="message3" cols="75" rows="20"></textarea><br /><br/>
+					<input type="button" class="button" onclick="forwarding();" value="Send" /><br/>
+				</form>
+			</div><!--foward-->
+		</div><!--formLayout-->
+		<div id ="centering2">
+			<p>
+    		<a href="http://validator.w3.org/check?uri=referer"><img
+       			src="http://www.w3.org/Icons/valid-xhtml10"
+       			alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+        	</a>
+			</p>
+    	</div><!--centering2-->
+	</div><!--box-->
+</body>
+</html>

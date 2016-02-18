@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* Stylesheet for Ka Pow! Email Client By Carlene J. Conner */
+body {
+background-image: url('back1.jpg');
+background-repeat: no-repeat;
+background-position:right;
+background-color: #343434;
+font-family:Verdana, Geneva, sans-serif;
+}
+div#box {
+margin-left: 30%;
+margin-right: 30%;
+}
+#centering1 {
+text-align : center;
+color : #CCC;
+}
+#centering2 {
+	text-align: center;
+}
+#passwordStrength {
+height : 10px;
+display : block;
+float : left;
+}
+.strength0 {
+width : 250px;
+background : #cccccc;
+}
+.strength1 {
+width : 50px;
+background : #ff0000;
+}
+.strength2 {
+width : 100px;
+background : #ff5f5f;
+}
+.strength3 {
+width : 150px;
+background : #56e500;
+}
+.strength4 {
+background : #4dcd00;
+width : 200px;
+}
+.strength5 {
+background : #399800;
+width : 250px;
+}
+.formLayout {
+background-image: url('powP.jpg');
+background-size: contain;
+background-color: #999;
+border : 1px solid #a1a1a1;
+padding-top:20px;
+padding-bottom:20px;
+padding-right:45px;
+padding-left:45px;
+width : 100%;
+/*Drop shaddow CSS3 */
+-moz-box-shadow: 3px 3px 4px #000;
+-webkit-box-shadow: 3px 3px 4px #000;
+box-shadow: 3px 3px 4px #000;
+/* For IE 8 */
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+/* For IE 5.5 - 7 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+.formLayout label, .formLayout input {
+display : block;
+width : auto;
+float : none;
+margin-bottom : 10px;
+}
+.formLayout label {
+text-align : left;
+padding-right : 20px;
+}
+input.button {
+float : left;
+}
+#messageBox {
+background-color: #CCC;
+border : 1px solid #a1a1a1;
+padding : 10px;
+/* Round Corners CSS3 */
+-moz-border-radius: 15px;  
+-khtml-border-radius: 15px;  
+-webkit-border-radius: 15px;  
+border-radius: 15px;
+}
+#inboxBox div {
+background-color: #CCC;
+border : 1px solid #a1a1a1;
+padding : 10px;
+/* Round corners */
+-moz-border-radius: 5px;  
+-khtml-border-radius: 5px;  
+-webkit-border-radius: 5px;  
+border-radius: 5px;
+}
+#inboxBox div:hover {
+background-color: #666;
+color:#CCC;
+}

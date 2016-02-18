@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/*  Stylesheet for Simple Coin Calculation By Carlene J. Conner */
+
+body {
+background:#666;
+background-repeat: no-repeat;
+background-size: 100%;
+font-family:Verdana, Geneva, sans-serif;
+}
+
+#box {
+margin-left: 30%;
+margin-right: 30%;
+}
+
+.formLayout {
+background-size: contain;
+background-color: #999;
+border : 1px solid #a1a1a1;
+padding-top:20px;
+padding-bottom:20px;
+padding-right:45px;
+padding-left:45px;
+width : 100%;
+/*Drop shaddow CSS3 */
+-moz-box-shadow: 3px 3px 4px #000;
+-webkit-box-shadow: 3px 3px 4px #000;
+box-shadow: 3px 3px 4px #000;
+/* For IE 8 */
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+/* For IE 5.5 - 7 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+.formLayout label, .formLayout input {
+display : block;
+width : auto;
+float : none;
+margin-bottom : 10px;
+}
+
+.formLayout label {
+text-align : left;
+padding-right : 20px;
+}
+
+input.button {
+float : left;
+}

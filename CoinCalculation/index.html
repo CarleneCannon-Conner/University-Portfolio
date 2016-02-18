@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="style.css" rel="stylesheet"  />
+	<script language="javascript" type="text/javascript" src="scripts.js"></script>
+	<title>BBC Task</title>
+</head>
+
+<body>
+	<div id="box">
+	<div class="formLayout">
+		<img src="images/coins.jpg"	alt="coins logo image" width="100%" />
+		A simple application that given a number of pennies will calculate the minimum number of Sterling coins needed to make that amount. <br />
+		Eg. 123p = 1 x £1, 1 x 20p, 1 x 2p, 1 x 1p <br/>
+		Eg. £1.25p = 1 x £1, 1 x 20p, 2 x 2p, 1 x 1p <br/>
+		If neither £, p, or decimals are used it is assumed the amount should be in pence. e.g. 675 is 675 pence<br /> 
+		The amount £231.341 will be rounded to 231.34 and then the decimal removed and given in pence (23114)<br />
+		Only the common £2, £1, 50p, 20p, 2p and 1p coins are acounted for. <br /><br />
+	<form name ="calculateCoins" action="javascript:coins()" method="get" />
+		<label>Enter an amount:</label>
+		<input type="text" name="inputbox" id ="calculateCoins" value="" />
+		<input type="submit" name="button" />
+  
+	<div id="coins">
+    <div id ="Number"></div><br/>
+		<strong>The coins needed:</strong><br />
+		<div id ="200">£2 x </div>
+		<div id ="100">£1 x </div>
+		<div id ="50">50p x </div>
+		<div id ="20">20p x </div>
+		<div id ="2">2p x </div>
+		<div id ="1">1p x </div>
+	</div>
+    </div>
+    </div>
+</body>
+</html>
